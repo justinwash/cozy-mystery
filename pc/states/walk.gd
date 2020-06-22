@@ -15,7 +15,7 @@ func update(delta):
 
 	if Input.is_action_pressed("ui_up"):
 		actor.move_dir.y = -1
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down") && actor.transform[2].y < 0:
 		actor.move_dir.y = 1
 	else:
 		actor.move_dir.y = 0
