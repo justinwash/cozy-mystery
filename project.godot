@@ -17,8 +17,15 @@ _global_script_class_icons={
 
 config/name="Cozy Mystery"
 config/description="a mystery adventure game"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Game/Game.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [rendering]
 
