@@ -1,7 +1,8 @@
 extends Node
 
-func enter(_game):
+func enter(game):
 	print('entered state: main_menu')
+	game.ui.switch_menu('main_menu')
 
 func ready(_game):
 	pass

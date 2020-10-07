@@ -1,12 +1,19 @@
-extends "res://utilities/finitestatemachine/state.gd"
+extends Node
 
-func enter():
-	.enter()
+func enter(game):
+	print('player entered state: idle')
 
-	print("idle")
+func ready(_game):
+	pass
+	
+func update(_game, _delta):
+	pass
+	
+func physics_update(_game, _delta):
+	pass
 
-func update(delta):
-	if Input.is_action_pressed("ui_right") || Input.is_action_pressed("ui_left"):
-		emit_signal("change_state", "walk")
-	if Input.is_action_pressed("ui_up") || Input.is_action_pressed("ui_down"):
-		emit_signal("change_state", "walk")
+func process_input(_game, _delta):
+	pass
+
+func exit(_game):
+	pass

@@ -1,20 +1,20 @@
 extends Node
 
+func enter(game):
+	print('entered state: options_menu')
+	game.ui.switch_menu('options_menu')
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func ready(_game):
+	pass
+	
+func update(_game, _delta):
+	pass
+	
+func physics_update(_game, _delta):
+	pass
 
+func process_input(_game, _delta):
+	pass
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func change_state(extra_arg_0):
-	pass # Replace with function body.
+func exit(_game):
+	pass

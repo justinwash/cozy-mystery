@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/HUD/HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/Game.gd" type="Script" id=2]
@@ -8,14 +8,16 @@
 [ext_resource path="res://Game/States/ChangeOptions.gd" type="Script" id=6]
 [ext_resource path="res://Game/States/NewGame.gd" type="Script" id=7]
 [ext_resource path="res://Game/States/LoadGame.gd" type="Script" id=8]
-[ext_resource path="res://UI/Menus/LoadGame/LoadGame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/Menus/LoadGameMenu/LoadGameMenu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Menus/OptionsMenu/OptionsMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/Panels/LoadingPanel/LoadingPanel.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World/World.tscn" type="PackedScene" id=12]
 
 [node name="Game" type="Node"]
 script = ExtResource( 2 )
 SKIP_TITLE = true
 
-[node name="World" type="Node" parent="."]
+[node name="World" parent="." instance=ExtResource( 12 )]
 
 [node name="UI" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -24,9 +26,15 @@ script = ExtResource( 4 )
 visible = false
 
 [node name="Panels" type="Control" parent="UI"]
+margin_right = 1920.0
+margin_bottom = 1088.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="LoadingPanel" parent="UI/Panels" instance=ExtResource( 11 )]
+margin_left = 0.0
+margin_right = 0.0
 
 [node name="Menus" type="Control" parent="UI"]
 __meta__ = {
@@ -36,10 +44,11 @@ __meta__ = {
 [node name="OptionsMenu" parent="UI/Menus" instance=ExtResource( 10 )]
 visible = false
 
-[node name="LoadGame" parent="UI/Menus" instance=ExtResource( 9 )]
+[node name="LoadGameMenu" parent="UI/Menus" instance=ExtResource( 9 )]
 visible = false
 
 [node name="MainMenu" parent="UI/Menus" instance=ExtResource( 3 )]
+visible = false
 
 [node name="States" type="Node" parent="."]
 
@@ -49,8 +58,19 @@ script = ExtResource( 5 )
 [node name="NewGame" type="Node" parent="States"]
 script = ExtResource( 7 )
 
-[node name="LoadGame" type="Node" parent="States"]
+[node name="LoadGameMenu" type="Node" parent="States"]
 script = ExtResource( 8 )
 
 [node name="OptionsMenu" type="Node" parent="States"]
 script = ExtResource( 6 )
+[connection signal="button_up" from="UI/Menus/OptionsMenu/OptionsButton" to="." method="change_state" binds= [ "main_menu" ]]
+[connection signal="button_up" from="UI/Menus/LoadGameMenu/ReturnButton" to="." method="change_state" binds= [ "main_menu" ]]
+[connection signal="button_up" from="UI/Menus/MainMenu/NewGameButton" to="." method="change_state" binds= [ "new_game" ]]
+[connection signal="button_up" from="UI/Menus/MainMenu/LoadGameButton" to="." method="change_state" binds= [ "load_game_menu" ]]
+[connection signal="button_up" from="UI/Menus/MainMenu/OptionsButton" to="." method="change_state" binds= [ "options_menu" ]]
+
+[editable path="UI/Menus/OptionsMenu"]
+
+[editable path="UI/Menus/LoadGameMenu"]
+
+[editable path="UI/Menus/MainMenu"]

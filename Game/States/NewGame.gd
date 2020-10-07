@@ -1,16 +1,25 @@
 extends Node
 
+func enter(game):
+	print('entered state: new_game')
+	
+	# load the game
+	game.ui.switch_panel('loading_panel')
+	game.world.enter_map('Overworld')
+	game.ui.switch_panel(null)
+	game.ui.switch_menu(null)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func ready(_game):
+	pass
+	
+func update(_game, _delta):
+	pass
+	
+func physics_update(_game, _delta):
+	pass
 
+func process_input(_game, _delta):
+	pass
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func exit(_game):
+	pass

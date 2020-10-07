@@ -1,11 +1,13 @@
 extends Node
 
 onready var menus = {
-		'main_menu': $UI/Menus/TitleScreen
+		'main_menu': $Menus/MainMenu,
+		'load_game_menu': $Menus/LoadGameMenu,
+		'options_menu': $Menus/OptionsMenu
 	}
 
 onready var panels = {
-		
+		'loading_panel': $Panels/LoadingPanel	
 	}
 	
 func _ready():
