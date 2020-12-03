@@ -7,7 +7,8 @@ onready var menus = {
 	}
 
 onready var panels = {
-		'loading_panel': $Panels/LoadingPanel	
+		'loading_panel': $Panels/LoadingPanel	,
+		'pause_panel': $Panels/PausePanel
 	}
 	
 func _ready():
@@ -17,7 +18,7 @@ func switch_panel(panel_name):
 	if !panel_name:
 		for panel in panels:
 			panels[panel].visible = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		# Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:
 		if panels[panel_name]:
 			for panel in panels:

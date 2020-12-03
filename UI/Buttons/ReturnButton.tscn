@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Fonts/MainMenuLargeButton.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Themes/main_theme.tres" type="Theme" id=2]
+
+[node name="ReturnButton" type="Button"]
+margin_left = 766.0
+margin_top = 792.0
+margin_right = 1150.0
+margin_bottom = 920.0
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Return to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}

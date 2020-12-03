@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://UI/HUD/HUD.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/Game.gd" type="Script" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://UI/Menus/OptionsMenu/OptionsMenu.tscn" type="PackedScene" id=10]
 [ext_resource path="res://UI/Panels/LoadingPanel/LoadingPanel.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/World.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Game/States/Playing.gd" type="Script" id=13]
+[ext_resource path="res://Game/States/Paused.gd" type="Script" id=14]
+[ext_resource path="res://UI/Panels/PausePanel/PausePanel.tscn" type="PackedScene" id=15]
 
 [node name="Game" type="Node"]
 script = ExtResource( 2 )
@@ -33,8 +36,11 @@ __meta__ = {
 }
 
 [node name="LoadingPanel" parent="UI/Panels" instance=ExtResource( 11 )]
+visible = false
 margin_left = 0.0
 margin_right = 0.0
+
+[node name="PausePanel" parent="UI/Panels" instance=ExtResource( 15 )]
 
 [node name="Menus" type="Control" parent="UI"]
 __meta__ = {
@@ -43,6 +49,7 @@ __meta__ = {
 
 [node name="OptionsMenu" parent="UI/Menus" instance=ExtResource( 10 )]
 visible = false
+script = null
 
 [node name="LoadGameMenu" parent="UI/Menus" instance=ExtResource( 9 )]
 visible = false
@@ -63,11 +70,23 @@ script = ExtResource( 8 )
 
 [node name="OptionsMenu" type="Node" parent="States"]
 script = ExtResource( 6 )
-[connection signal="button_up" from="UI/Menus/OptionsMenu/OptionsButton" to="." method="change_state" binds= [ "main_menu" ]]
+
+[node name="Playing" type="Node" parent="States"]
+script = ExtResource( 13 )
+
+[node name="Paused" type="Node" parent="States"]
+script = ExtResource( 14 )
+[connection signal="button_up" from="UI/Panels/PausePanel/ReturnButton" to="." method="change_state" binds= [ "playing" ]]
+[connection signal="button_up" from="UI/Panels/PausePanel/ReturnButton" to="UI" method="switch_panel" binds= [ "" ]]
+[connection signal="button_up" from="UI/Menus/OptionsMenu/ReturnButton" to="." method="change_state" binds= [ "main_menu" ]]
 [connection signal="button_up" from="UI/Menus/LoadGameMenu/ReturnButton" to="." method="change_state" binds= [ "main_menu" ]]
 [connection signal="button_up" from="UI/Menus/MainMenu/NewGameButton" to="." method="change_state" binds= [ "new_game" ]]
 [connection signal="button_up" from="UI/Menus/MainMenu/LoadGameButton" to="." method="change_state" binds= [ "load_game_menu" ]]
 [connection signal="button_up" from="UI/Menus/MainMenu/OptionsButton" to="." method="change_state" binds= [ "options_menu" ]]
+
+[editable path="UI/Panels/LoadingPanel"]
+
+[editable path="UI/Panels/PausePanel"]
 
 [editable path="UI/Menus/OptionsMenu"]
 

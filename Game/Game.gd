@@ -24,7 +24,9 @@ onready var states = {
 	'main_menu': $States/MainMenu,
 	'new_game': $States/NewGame,
 	'load_game_menu': $States/LoadGameMenu,
-	'options_menu': $States/OptionsMenu
+	'options_menu': $States/OptionsMenu,
+	'playing': $States/Playing,
+	'paused': $States/Paused
 }
 
 func _init_state(state_name):

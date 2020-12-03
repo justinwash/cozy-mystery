@@ -6,14 +6,6 @@
 [ext_resource path="res://Assets/Art/Placeholder/layer3.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Art/Placeholder/layer2.png" type="Texture" id=5]
 
-
-
-
-
-
-
-
-
 [node name="Town" type="Node2D"]
 position = Vector2( 210.283, 103.788 )
 script = ExtResource( 3 )

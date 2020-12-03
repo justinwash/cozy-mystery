@@ -8,7 +8,9 @@ func enter(game):
 	game.world.enter_map('Overworld')
 	game.ui.switch_panel(null)
 	game.ui.switch_menu(null)
-
+	
+	game.change_state('playing')
+	
 func ready(_game):
 	pass
 	
