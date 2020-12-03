@@ -21,14 +21,13 @@ func process_input(player, _delta):
 # i hate this is there a better way?
 	
 	player.dir = Vector3()
-	var cam_xform = player.camera.get_global_transform()
 
-	var input_movement_vector = Vector2()
+	var input_movement_vector = Vector3()
 
 	if Input.is_action_pressed("move_forward"):
-		input_movement_vector.y += 1
+		input_movement_vector.z -= 1
 	if Input.is_action_pressed("move_backward"):
-		input_movement_vector.y -= 1
+		input_movement_vector.z += 1
 	if Input.is_action_pressed("move_left"):
 		input_movement_vector.x -= 1
 	if Input.is_action_pressed("move_right"):
@@ -36,8 +35,7 @@ func process_input(player, _delta):
 
 	input_movement_vector = input_movement_vector.normalized()
 
-	player.dir += -cam_xform.basis.z * input_movement_vector.y
-	player.dir += cam_xform.basis.x * input_movement_vector.x
+	player.dir += input_movement_vector
 
 	if player.is_on_floor():
 		if Input.is_action_just_pressed("jump"):

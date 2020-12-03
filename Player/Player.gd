@@ -2,15 +2,13 @@ extends KinematicBody
 
 const GRAVITY = -20
 const JUMP_SPEED = 7.5
-const MAX_SPEED = 12
+const MAX_SPEED = 6
 const ACCEL = 4.5
 const DEACCEL= 16
 const MAX_SLOPE_ANGLE = 40
 
 var dir = Vector3()
 var vel = Vector3()
-
-onready var camera = $Camera
 
 # Lifecycle methods
 func _ready():
