@@ -1,0 +1,12 @@
+res://Game/Game.tscn
+res://Themes/main_theme.tres
+res://Game/Game.gd
+res://UI/UI.gd
+res://World/World.gd
+res://World/World.tscn
+res://UI/HUD/HUD.tscn
+res://World/Maps/Overworld/Overworld.tscn
+res://Game/States/MainMenu.gd
+res://Game/States/NewGame.gd
+res://World/Maps/Overworld/Overworld.gd
+res://Aubrey.tscn

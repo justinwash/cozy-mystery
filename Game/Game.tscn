@@ -1,95 +1,346 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=3 uid="uid://caqomtv8iooir"]
 
-[ext_resource path="res://UI/HUD/HUD.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Game/Game.gd" type="Script" id=2]
-[ext_resource path="res://UI/Menus/MainMenu/MainMenu.tscn" type="PackedScene" id=3]
-[ext_resource path="res://UI/UI.gd" type="Script" id=4]
-[ext_resource path="res://Game/States/MainMenu.gd" type="Script" id=5]
-[ext_resource path="res://Game/States/ChangeOptions.gd" type="Script" id=6]
-[ext_resource path="res://Game/States/NewGame.gd" type="Script" id=7]
-[ext_resource path="res://Game/States/LoadGame.gd" type="Script" id=8]
-[ext_resource path="res://UI/Menus/LoadGameMenu/LoadGameMenu.tscn" type="PackedScene" id=9]
-[ext_resource path="res://UI/Menus/OptionsMenu/OptionsMenu.tscn" type="PackedScene" id=10]
-[ext_resource path="res://UI/Panels/LoadingPanel/LoadingPanel.tscn" type="PackedScene" id=11]
-[ext_resource path="res://World/World.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Game/States/Playing.gd" type="Script" id=13]
-[ext_resource path="res://Game/States/Paused.gd" type="Script" id=14]
-[ext_resource path="res://UI/Panels/PausePanel/PausePanel.tscn" type="PackedScene" id=15]
+[ext_resource type="PackedScene" uid="uid://ceh8s6c1vwmy0" path="res://UI/HUD/HUD.tscn" id="1"]
+[ext_resource type="Script" path="res://Game/Game.gd" id="2"]
+[ext_resource type="PackedScene" path="res://UI/Menus/MainMenu/MainMenu.tscn" id="3"]
+[ext_resource type="Script" path="res://UI/UI.gd" id="4"]
+[ext_resource type="Script" path="res://Game/States/MainMenu.gd" id="5"]
+[ext_resource type="Script" path="res://Game/States/ChangeOptions.gd" id="6"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/MainMenuHeader.tres" id="6_6eqdw"]
+[ext_resource type="Script" path="res://Game/States/NewGame.gd" id="7"]
+[ext_resource type="Script" path="res://Game/States/LoadGame.gd" id="8"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/MainMenuLargeButton.tres" id="8_on4x1"]
+[ext_resource type="PackedScene" path="res://UI/Menus/LoadGameMenu/LoadGameMenu.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://UI/Menus/OptionsMenu/OptionsMenu.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://UI/Panels/LoadingPanel/LoadingPanel.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://d0atghwnrqdri" path="res://World/World.tscn" id="12"]
+[ext_resource type="Script" path="res://Game/States/Playing.gd" id="13"]
+[ext_resource type="Script" path="res://Game/States/Paused.gd" id="14"]
+[ext_resource type="PackedScene" path="res://UI/Panels/PausePanel/PausePanel.tscn" id="15"]
+
+[sub_resource type="Animation" id="2126"]
+resource_name = "Loading"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Header:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["LOADING.", "LOADING..", "LOADING..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jd2be"]
+_data = {
+"Loading": SubResource("2126")
+}
 
 [node name="Game" type="Node"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 SKIP_TITLE = true
 
-[node name="World" parent="." instance=ExtResource( 12 )]
+[node name="World" parent="." instance=ExtResource("12")]
 
 [node name="UI" type="Node" parent="."]
-script = ExtResource( 4 )
+script = ExtResource("4")
 
-[node name="HUD" parent="UI" instance=ExtResource( 1 )]
+[node name="HUD" parent="UI" instance=ExtResource("1")]
 visible = false
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panels" type="Control" parent="UI"]
-margin_right = 1920.0
-margin_bottom = 1088.0
-__meta__ = {
-"_edit_use_anchors_": false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoadingPanel" parent="UI/Panels" instance=ExtResource("11")]
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="UI/Panels/LoadingPanel" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.215686, 0.392157, 1)
+
+[node name="Header" parent="UI/Panels/LoadingPanel" index="1"]
+anchors_preset = 8
+offset_left = -42.5
+offset_top = -14.0
+offset_right = 42.5
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_6eqdw")
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" parent="UI/Panels/LoadingPanel" index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_jd2be")
 }
 
-[node name="LoadingPanel" parent="UI/Panels" instance=ExtResource( 11 )]
+[node name="PausePanel" parent="UI/Panels" instance=ExtResource("15")]
 visible = false
-margin_left = 0.0
-margin_right = 0.0
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="PausePanel" parent="UI/Panels" instance=ExtResource( 15 )]
+[node name="Background" parent="UI/Panels/PausePanel" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" parent="UI/Panels/PausePanel" index="1"]
+anchors_preset = 8
+offset_left = -33.0
+offset_top = -14.0
+offset_right = 33.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_6eqdw")
+theme_override_font_sizes/font_size = 200
+
+[node name="ReturnButton" parent="UI/Panels/PausePanel" index="2"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.795
+anchor_right = 0.5
+anchor_bottom = 0.795
+offset_left = -64.0
+offset_top = -11.16
+offset_right = 64.0
+offset_bottom = 13.84
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("8_on4x1")
+theme_override_font_sizes/font_size = 26
 
 [node name="Menus" type="Control" parent="UI"]
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="OptionsMenu" parent="UI/Menus" instance=ExtResource( 10 )]
+[node name="OptionsMenu" parent="UI/Menus" instance=ExtResource("10")]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
 script = null
 
-[node name="LoadGameMenu" parent="UI/Menus" instance=ExtResource( 9 )]
-visible = false
+[node name="Background" parent="UI/Menus/OptionsMenu" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="MainMenu" parent="UI/Menus" instance=ExtResource( 3 )]
+[node name="Header" parent="UI/Menus/OptionsMenu" index="1"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.691
+offset_left = 376.0
+offset_top = 64.0
+offset_right = -377.0
+offset_bottom = -166.768
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_6eqdw")
+theme_override_font_sizes/font_size = 200
+
+[node name="Label" parent="UI/Menus/OptionsMenu/Header" index="0"]
+anchors_preset = -1
+anchor_left = 0.221
+anchor_top = 0.959
+anchor_right = 0.774
+anchor_bottom = 1.263
+offset_left = 23.821
+offset_top = 15.897
+offset_right = -20.826
+offset_bottom = -22.071
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReturnButton" parent="UI/Menus/OptionsMenu" index="2"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.797
+anchor_right = 0.5
+anchor_bottom = 0.797
+offset_left = -96.0
+offset_top = -12.4561
+offset_right = 92.0
+offset_bottom = 22.5439
+theme_override_fonts/font = ExtResource("8_on4x1")
+theme_override_font_sizes/font_size = 26
+
+[node name="LoadGameMenu" parent="UI/Menus" instance=ExtResource("9")]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="UI/Menus/LoadGameMenu" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" parent="UI/Menus/LoadGameMenu" index="1"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.593
+offset_left = 528.0
+offset_top = 184.0
+offset_right = -526.0
+offset_bottom = -172.264
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_6eqdw")
+theme_override_font_sizes/font_size = 200
+
+[node name="Label" parent="UI/Menus/LoadGameMenu/Header" index="0"]
+anchors_preset = -1
+anchor_left = 0.31
+anchor_top = 0.878
+anchor_right = 0.686
+anchor_bottom = 1.173
+offset_left = 7.89999
+offset_top = 7.974
+offset_right = -8.86002
+offset_bottom = -28.041
+
+[node name="ReturnButton" parent="UI/Menus/LoadGameMenu" index="2"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.797
+anchor_right = 0.5
+anchor_bottom = 0.797
+offset_left = -96.0
+offset_top = -20.4561
+offset_right = 92.0
+offset_bottom = 14.5439
+theme_override_fonts/font = ExtResource("8_on4x1")
+theme_override_font_sizes/font_size = 26
+
+[node name="MainMenu" parent="UI/Menus" instance=ExtResource("3")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="UI/Menus/MainMenu" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" parent="UI/Menus/MainMenu" index="1"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.494
+offset_bottom = -0.112
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("6_6eqdw")
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" parent="UI/Menus/MainMenu/Header" index="0"]
+anchors_preset = -1
+anchor_left = 0.444
+anchor_top = 0.8
+anchor_right = 0.556
+anchor_bottom = 1.0
+offset_left = -31.488
+offset_right = 44.4879
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("6_6eqdw")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewGameButton" parent="UI/Menus/MainMenu" index="2"]
+offset_left = 504.0
+offset_top = 408.0
+offset_right = 648.0
+offset_bottom = 443.0
+theme_override_fonts/font = ExtResource("8_on4x1")
+theme_override_font_sizes/font_size = 26
+
+[node name="LoadGameButton" parent="UI/Menus/MainMenu" index="3"]
+offset_left = 504.0
+offset_top = 456.0
+offset_right = 648.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("8_on4x1")
+theme_override_font_sizes/font_size = 26
+
+[node name="OptionsButton" parent="UI/Menus/MainMenu" index="4"]
+offset_left = 520.0
+offset_top = 560.0
+offset_right = 635.0
+offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("8_on4x1")
+theme_override_font_sizes/font_size = 26
 
 [node name="States" type="Node" parent="."]
 
 [node name="MainMenu" type="Node" parent="States"]
-script = ExtResource( 5 )
+script = ExtResource("5")
 
 [node name="NewGame" type="Node" parent="States"]
-script = ExtResource( 7 )
+script = ExtResource("7")
 
 [node name="LoadGameMenu" type="Node" parent="States"]
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="OptionsMenu" type="Node" parent="States"]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
 [node name="Playing" type="Node" parent="States"]
-script = ExtResource( 13 )
+script = ExtResource("13")
 
 [node name="Paused" type="Node" parent="States"]
-script = ExtResource( 14 )
-[connection signal="button_up" from="UI/Panels/PausePanel/ReturnButton" to="." method="change_state" binds= [ "playing" ]]
-[connection signal="button_up" from="UI/Panels/PausePanel/ReturnButton" to="UI" method="switch_panel" binds= [ "" ]]
-[connection signal="button_up" from="UI/Menus/OptionsMenu/ReturnButton" to="." method="change_state" binds= [ "main_menu" ]]
-[connection signal="button_up" from="UI/Menus/LoadGameMenu/ReturnButton" to="." method="change_state" binds= [ "main_menu" ]]
-[connection signal="button_up" from="UI/Menus/MainMenu/NewGameButton" to="." method="change_state" binds= [ "new_game" ]]
-[connection signal="button_up" from="UI/Menus/MainMenu/LoadGameButton" to="." method="change_state" binds= [ "load_game_menu" ]]
-[connection signal="button_up" from="UI/Menus/MainMenu/OptionsButton" to="." method="change_state" binds= [ "options_menu" ]]
+script = ExtResource("14")
+
+[connection signal="button_up" from="UI/Panels/PausePanel/ReturnButton" to="." method="change_state" binds= ["playing"]]
+[connection signal="button_up" from="UI/Panels/PausePanel/ReturnButton" to="UI" method="switch_panel" binds= [""]]
+[connection signal="button_up" from="UI/Menus/OptionsMenu/ReturnButton" to="." method="change_state" binds= ["main_menu"]]
+[connection signal="button_up" from="UI/Menus/LoadGameMenu/ReturnButton" to="." method="change_state" binds= ["main_menu"]]
+[connection signal="button_up" from="UI/Menus/MainMenu/NewGameButton" to="." method="change_state" binds= ["new_game"]]
+[connection signal="button_up" from="UI/Menus/MainMenu/LoadGameButton" to="." method="change_state" binds= ["load_game_menu"]]
+[connection signal="button_up" from="UI/Menus/MainMenu/OptionsButton" to="." method="change_state" binds= ["options_menu"]]
 
 [editable path="UI/Panels/LoadingPanel"]
-
 [editable path="UI/Panels/PausePanel"]
-
 [editable path="UI/Menus/OptionsMenu"]
-
 [editable path="UI/Menus/LoadGameMenu"]
-
 [editable path="UI/Menus/MainMenu"]
