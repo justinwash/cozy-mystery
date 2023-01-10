@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://ndrl538m783"]
+
+[ext_resource type="Texture2D" uid="uid://bdfcbttthmfcf" path="res://Assets/Generated/library.png" id="1_fylc5"]
+[ext_resource type="Texture2D" uid="uid://b58ife34bt2yt" path="res://Assets/Generated/house.png" id="2_6a6rn"]
+[ext_resource type="PackedScene" uid="uid://ccljq2pmiugdq" path="res://main_pc.tscn" id="3_0o21s"]
+[ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="3_kuo22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40l7p"]
+size = Vector2(910.222, 546.133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qch5"]
+size = Vector2(939.671, 698.729)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k4tc"]
+size = Vector2(1146, 90)
+
+[node name="Town" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 8.0
+offset_right = 1152.0
+offset_bottom = 656.0
+color = Color(0.454902, 0.694118, 0.905882, 1)
+
+[node name="Library2" type="StaticBody2D" parent="."]
+
+[node name="Library" type="Sprite2D" parent="Library2"]
+position = Vector2(168, 360)
+scale = Vector2(0.351563, 0.351563)
+texture = ExtResource("1_fylc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Library2"]
+position = Vector2(168, 312)
+scale = Vector2(0.351563, 0.351563)
+shape = SubResource("RectangleShape2D_40l7p")
+
+[node name="Big Ole House" type="StaticBody2D" parent="."]
+
+[node name="House" type="Sprite2D" parent="Big Ole House"]
+position = Vector2(488, 328)
+scale = Vector2(0.332031, 0.332031)
+texture = ExtResource("2_6a6rn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Big Ole House"]
+position = Vector2(484, 292)
+scale = Vector2(0.332031, 0.332031)
+shape = SubResource("RectangleShape2D_5qch5")
+
+[node name="Sidewalk" type="Sprite2D" parent="."]
+position = Vector2(103, 520)
+scale = Vector2(0.160156, 0.160156)
+texture = ExtResource("3_kuo22")
+
+[node name="Sidewalk2" type="Sprite2D" parent="."]
+position = Vector2(264, 520)
+scale = Vector2(0.160156, 0.160156)
+texture = ExtResource("3_kuo22")
+
+[node name="Sidewalk3" type="Sprite2D" parent="."]
+position = Vector2(424, 520)
+scale = Vector2(0.160156, 0.160156)
+texture = ExtResource("3_kuo22")
+
+[node name="Sidewalk4" type="Sprite2D" parent="."]
+position = Vector2(584, 520)
+scale = Vector2(0.160156, 0.160156)
+texture = ExtResource("3_kuo22")
+
+[node name="Main PC" parent="." instance=ExtResource("3_0o21s")]
+position = Vector2(168, 544)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(571, 611)
+shape = SubResource("RectangleShape2D_7k4tc")

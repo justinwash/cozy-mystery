@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cklkby8qdlsvx"]
+
+[ext_resource type="Texture2D" uid="uid://ca8q5kpu4cpnf" path="res://Assets/Generated/house_interior.png" id="1_8n44f"]
+[ext_resource type="PackedScene" uid="uid://ccljq2pmiugdq" path="res://main_pc.tscn" id="2_x4e53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7r0b"]
+size = Vector2(1177, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a80v5"]
+size = Vector2(18, 658)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndyql"]
+size = Vector2(1168, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1s4s"]
+size = Vector2(17, 626)
+
+[node name="Inside of House" type="Node2D"]
+
+[node name="HouseInterior" type="Sprite2D" parent="."]
+position = Vector2(579.25, 324)
+scale = Vector2(0.632813, 0.632813)
+texture = ExtResource("1_8n44f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Bottom of room" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(579.5, 640)
+shape = SubResource("RectangleShape2D_j7r0b")
+
+[node name="Left wall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 320)
+shape = SubResource("RectangleShape2D_a80v5")
+
+[node name="Ceiling" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 79)
+shape = SubResource("RectangleShape2D_ndyql")
+
+[node name="Right wall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1144.5, 319)
+shape = SubResource("RectangleShape2D_h1s4s")
+
+[node name="Main PC" parent="." instance=ExtResource("2_x4e53")]
+position = Vector2(584, 306)
+scale = Vector2(2.449, 2.449)

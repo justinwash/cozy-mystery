@@ -1,15 +1,18 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1673303799
+::res://::1673311897
 default_env.tres::Environment::-1::1673214460::0::1::::<><>::
 icon.png::CompressedTexture2D::8854954685018542675::1673214460::1673305039::1::::<><>::
 README.md::TextFile::-1::1673214460::0::1::::<><>::
+Main PC.gd::GDScript::-1::1673307534::0::1::::<>CharacterBody2D<>::
+main_pc.tscn::PackedScene::4936503677453529966::1673311897::0::1::::<><>::res://Main PC.gd<>uid://bh4jjuqj5rkwi
+town.tscn::PackedScene::27050045695244526::1673311897::0::1::::<><>::uid://bdfcbttthmfcf<>uid://b58ife34bt2yt<>uid://ccljq2pmiugdq<>uid://dv65lht83lbfs
 ::res://Assets/::1673303300
 ::res://Assets/Art/::1673214460
 ::res://Assets/Art/Placeholder/::1673303753
 layer1.png::CompressedTexture2D::918538056581849852::1673214460::1673303753::1::::<><>::
 layer2.png::CompressedTexture2D::6830704554510384336::1673214460::1673303753::1::::<><>::
 layer3.png::CompressedTexture2D::3734836881734019425::1673214460::1673303753::1::::<><>::
-::res://Assets/Art/Tiles/::1673303753
+::res://Assets/Art/Tiles/::1673305039
 bad-block.png::CompressedTexture2D::5818093110555422524::1673214460::1673305039::1::::<><>::
 bad-grass.png::CompressedTexture2D::2017783143178819148::1673214460::1673305039::1::::<><>::
 bad-h-path.png::CompressedTexture2D::3670350779952049019::1673214460::1673305039::1::::<><>::
@@ -28,22 +31,22 @@ MainMenuHeader.tres::FontFile::-1::1673214460::0::1::::<><>::res://Assets/Fonts/
 MainMenuLargeButton.tres::FontFile::-1::1673214460::0::1::::<><>::res://Assets/Fonts/AgeoPersonalUse-Bold.otf
 Paper Flowers.otf::FontFile::5437020908595187887::1673214460::1673303753::1::::<><>::
 Paper Flowers.ttf::FontFile::2867462902875317364::1673214460::1673303753::1::::<><>::
-::res://Assets/Generated/::1673303754
-character.png::CompressedTexture2D::2938173144740666404::1673303496::1673303753::1::::<><>::
-house.png::CompressedTexture2D::4560705378297368055::1673303051::1673303753::1::::<><>::
+::res://Assets/Generated/::1673306097
+character.png::CompressedTexture2D::2938173144740666404::1673305922::1673306097::1::::<><>::
+house.png::CompressedTexture2D::4560705378297368055::1673305956::1673306097::1::::<><>::
 house_interior.png::CompressedTexture2D::4841991428324711323::1673303282::1673303754::1::::<><>::
-library.png::CompressedTexture2D::2607433351324976461::1673303598::1673303753::1::::<><>::
+library.png::CompressedTexture2D::2607433351324976461::1673306008::1673306097::1::::<><>::
 library_interior.png::CompressedTexture2D::693458865712759651::1673302997::1673303754::1::::<><>::
-road.png::CompressedTexture2D::8756429163081871889::1673303021::1673303753::1::::<><>::
-sidewalk.png::CompressedTexture2D::8699065029921739064::1673303011::1673303753::1::::<><>::
-::res://Game/::1673304958
+road.png::CompressedTexture2D::8756429163081871889::1673306042::1673306097::1::::<><>::
+sidewalk.png::CompressedTexture2D::8699065029921739064::1673306074::1673306097::1::::<><>::
+::res://Game/::1673305258
 Game.gd::GDScript::-1::1673303859::0::1::::<>Node<>::
-Game.tscn::PackedScene::4806743910771919657::1673304958::0::1::::<><>::uid://ceh8s6c1vwmy0<>res://Game/Game.gd<>res://UI/Menus/MainMenu/MainMenu.tscn<>res://UI/UI.gd<>res://Game/States/MainMenu.gd<>res://Game/States/ChangeOptions.gd<>res://Assets/Fonts/MainMenuHeader.tres<>res://Game/States/NewGame.gd<>res://Game/States/LoadGame.gd<>res://Assets/Fonts/MainMenuLargeButton.tres<>res://UI/Menus/LoadGameMenu/LoadGameMenu.tscn<>res://UI/Menus/OptionsMenu/OptionsMenu.tscn<>res://UI/Panels/LoadingPanel/LoadingPanel.tscn<>uid://d0atghwnrqdri<>res://Game/States/Playing.gd<>res://Game/States/Paused.gd<>res://UI/Panels/PausePanel/PausePanel.tscn
-::res://Game/States/::1673214460
+Game.tscn::PackedScene::4806743910771919657::1673305258::0::1::::<><>::uid://ceh8s6c1vwmy0<>res://Game/Game.gd<>res://UI/Menus/MainMenu/MainMenu.tscn<>res://UI/UI.gd<>res://Game/States/MainMenu.gd<>res://Game/States/ChangeOptions.gd<>res://Assets/Fonts/MainMenuHeader.tres<>res://Game/States/NewGame.gd<>res://Game/States/LoadGame.gd<>res://Assets/Fonts/MainMenuLargeButton.tres<>res://UI/Menus/LoadGameMenu/LoadGameMenu.tscn<>res://UI/Menus/OptionsMenu/OptionsMenu.tscn<>res://UI/Panels/LoadingPanel/LoadingPanel.tscn<>uid://d0atghwnrqdri<>res://Game/States/Playing.gd<>res://Game/States/Paused.gd<>res://UI/Panels/PausePanel/PausePanel.tscn
+::res://Game/States/::1673305054
 ChangeOptions.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
 LoadGame.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
-MainMenu.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
-NewGame.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
+MainMenu.gd::GDScript::-1::1673305054::0::1::::<>Node<>::
+NewGame.gd::GDScript::-1::1673305054::0::1::::<>Node<>::
 Paused.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
 Playing.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
 ::res://Places/::1673214460
@@ -66,9 +69,9 @@ main_theme.tres::Theme::7518834576705183209::1673303831::0::1::::<><>::uid://bqs
 UI.gd::GDScript::-1::1673304957::0::1::::<>Node<>::
 ::res://UI/Buttons/::1673214460
 ReturnButton.tscn::PackedScene::-1::1673214460::0::1::::<><>::res://Assets/Fonts/MainMenuLargeButton.tres<>res://Themes/main_theme.tres
-::res://UI/HUD/::1673304958
+::res://UI/HUD/::1673305258
 HUD.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
-HUD.tscn::PackedScene::5070084823792058297::1673304958::0::1::::<><>::
+HUD.tscn::PackedScene::5070084823792058297::1673305258::0::1::::<><>::
 ::res://UI/Menus/::1673214460
 ::res://UI/Menus/LoadGameMenu/::1673214460
 LoadGameMenu.gd::GDScript::-1::1673214460::0::1::::<>Control<>::
@@ -91,10 +94,10 @@ PausePanel.tscn::PackedScene::-1::1673214460::0::1::::<><>::res://Themes/main_th
 ::res://utilities/finitestatemachine/::1673214460
 finitestatemachine.gd::GDScript::-1::1673214460::0::1::::<><>::
 state.gd::GDScript::-1::1673214460::0::1::::<>Node<>::
-::res://World/::1673304958
-World.gd::GDScript::-1::1673303871::0::1::::<>Node<>::
-World.tscn::PackedScene::8915147881919264262::1673304958::0::1::::<><>::res://World/World.gd
+::res://World/::1673305258
+World.gd::GDScript::-1::1673305114::0::1::::<>Node<>::
+World.tscn::PackedScene::8915147881919264262::1673305258::0::1::::<><>::res://World/World.gd
 ::res://World/Maps/::1673214460
-::res://World/Maps/Overworld/::1673214460
-Overworld.gd::GDScript::-1::1673214460::0::1::::<>Spatial<>::
-Overworld.tscn::PackedScene::-1::1673214460::0::1::::<><>::res://World/Maps/Overworld/Overworld.gd<>res://Assets/Art/Placeholder/layer1.png<>res://Assets/Art/Placeholder/layer3.png<>res://Assets/Art/Placeholder/layer2.png<>res://Assets/Art/Tiles/bad-grass.png<>res://Player/Player.tscn<>res://Assets/Art/Tiles/wall.png<>res://Assets/Art/Tiles/bad-h-path.png<>res://Assets/Art/Tiles/bad-v-path.png<>res://Assets/Art/Tiles/bad-block.png
+::res://World/Maps/Overworld/::1673305258
+Overworld.gd::GDScript::-1::1673305054::0::1::::<>Node3D<>::
+Overworld.tscn::PackedScene::2184347600508458240::1673305258::0::1::::<><>::res://World/Maps/Overworld/Overworld.gd<>uid://30ougfscyljo<>res://Player/Player.tscn<>uid://cao6apjugoksl<>uid://bsj7e2d3e7qb0<>uid://cmjk3isssg8lv<>uid://co5le4487h4my
