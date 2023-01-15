@@ -16,6 +16,7 @@ func _physics_process(delta):
 		if interactable == "HouseInteriorDoor":
 			get_tree().root.get_node("InsideOfHouse").queue_free()
 			var town = load("res://Town.tscn").instantiate()
+			town.spawn_point = town.get_node("House/HouseDoor")
 			get_tree().root.add_child(town)
 	var Horizontal_direction = Input.get_axis("move_left", "move_right")
 	var Vertical_direction = Input.get_axis("move_up", "move_down")

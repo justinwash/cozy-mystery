@@ -2,3 +2,4 @@ res://MainPC.tscn
 res://Town.tscn
 res://main_pc.gd
 res://InsideOfHouse.tscn
+res://town.gd

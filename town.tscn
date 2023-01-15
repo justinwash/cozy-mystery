@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3hmy4nevu5b2"]
+[gd_scene load_steps=9 format=3 uid="uid://d3hmy4nevu5b2"]
 
+[ext_resource type="Script" path="res://town.gd" id="1_5usvy"]
 [ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="1_bwh1c"]
 [ext_resource type="Texture2D" uid="uid://b58ife34bt2yt" path="res://Assets/Generated/house.png" id="2_uaykp"]
 [ext_resource type="Texture2D" uid="uid://bdfcbttthmfcf" path="res://Assets/Generated/library.png" id="3_iugs8"]
@@ -15,6 +16,7 @@ size = Vector2(34, 706)
 size = Vector2(217.722, 265.267)
 
 [node name="Town" type="Node2D"]
+script = ExtResource("1_5usvy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -75,5 +77,8 @@ position = Vector2(277, 274)
 scale = Vector2(0.461914, 0.461914)
 texture = ExtResource("3_iugs8")
 
-[node name="Main PC" parent="." instance=ExtResource("4_nenwb")]
-position = Vector2(96, 432)
+[node name="MainPC" parent="." instance=ExtResource("4_nenwb")]
+position = Vector2(31, 432)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(27, 440)
