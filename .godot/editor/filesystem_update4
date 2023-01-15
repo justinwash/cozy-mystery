@@ -1,4 +1,4 @@
-res://town.tscn
-res://Main PC.gd
-res://main_pc.tscn
-res://inside_of_house.tscn
+res://MainPC.tscn
+res://Town.tscn
+res://main_pc.gd
+res://InsideOfHouse.tscn

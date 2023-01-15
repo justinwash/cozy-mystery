@@ -1,5 +1,8 @@
 CollisionShape2D
+Area2D
 StaticBody2D
 RigidBody2D
-CharacterBody2D
 ColorRect
+Node
+Node2D
+CharacterBody2D
