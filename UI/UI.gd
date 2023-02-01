@@ -1,38 +1,38 @@
 extends Node
 
 @onready var menus = {
-		'main_menu': $Menus/MainMenu,
-		'load_game_menu': $Menus/LoadGameMenu,
-		'options_menu': $Menus/OptionsMenu
-	}
+    'main_menu': $Menus/MainMenu,
+    'load_game_menu': $Menus/LoadGameMenu,
+    'options_menu': $Menus/OptionsMenu
+  }
 
 @onready var panels = {
-		'loading_panel': $Panels/LoadingPanel	,
-		'pause_panel': $Panels/PausePanel
-	}
+    'loading_panel': $Panels/LoadingPanel	,
+    'pause_panel': $Panels/PausePanel
+  }
 
 func _ready():
-	pass
+  pass
 
 func switch_panel(panel_name):
-	if str(panel_name) == "<null>":
-		for panel in panels:
-			panels[panel].visible = false
-		# Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	else:
-		if panels[panel_name]:
-			for panel in panels:
-				panels[panel].visible = false
-			panels[panel_name].visible = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+  if str(panel_name) == "<null>":
+    for panel in panels:
+      panels[panel].visible = false
+    # Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+  else:
+    if panels[panel_name]:
+      for panel in panels:
+        panels[panel].visible = false
+      panels[panel_name].visible = true
+    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func switch_menu(menu_name):
-	if str(menu_name) =="<null>":
-		for menu in menus:
-			menus[menu].visible = false
-	else:
-		if menus[menu_name]:
-			for menu in menus:
-				menus[menu].visible = false
-			menus[menu_name].visible = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+  if str(menu_name) =="<null>":
+    for menu in menus:
+      menus[menu].visible = false
+  else:
+    if menus[menu_name]:
+      for menu in menus:
+        menus[menu].visible = false
+      menus[menu_name].visible = true
+    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

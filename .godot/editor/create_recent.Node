@@ -1,5 +1,7 @@
-Marker2D
+AnimatedSprite2D
+AnimationPlayer
 CollisionShape2D
+Marker2D
 Area2D
 StaticBody2D
 RigidBody2D

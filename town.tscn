@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3hmy4nevu5b2"]
+[gd_scene load_steps=13 format=3 uid="uid://d3hmy4nevu5b2"]
 
 [ext_resource type="Script" path="res://town.gd" id="1_5usvy"]
 [ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="1_bwh1c"]
@@ -12,11 +12,66 @@ size = Vector2(1178, 346)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vr1j8"]
 size = Vector2(34, 706)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olbjg"]
+size = Vector2(1178, 354)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gvg6"]
 size = Vector2(217.722, 265.267)
 
+[sub_resource type="Animation" id="Animation_tob8b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainPC:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(31, 432)]
+}
+
+[sub_resource type="Animation" id="Animation_50d63"]
+resource_name = "The first cut scene this town has ever seen"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainPC:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.1, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(31, 432), Vector2(856, 464), Vector2(867, 400)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainPC")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animate_inside_house"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6jtrt"]
+_data = {
+"RESET": SubResource("Animation_tob8b"),
+"The first cut scene this town has ever seen": SubResource("Animation_50d63")
+}
+
 [node name="Town" type="Node2D"]
 script = ExtResource("1_5usvy")
+trigger_animation = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -35,6 +90,10 @@ shape = SubResource("RectangleShape2D_vr1j8")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1152, 336)
 shape = SubResource("RectangleShape2D_vr1j8")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(579, 167)
+shape = SubResource("RectangleShape2D_olbjg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1160.0
@@ -82,3 +141,8 @@ position = Vector2(31, 432)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(27, 440)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6jtrt")
+}
