@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs1yotoj6mril"]
+[gd_scene load_steps=8 format=3 uid="uid://cs1yotoj6mril"]
 
+[ext_resource type="Script" path="res://InsideOfHouse.gd" id="1_4m50j"]
 [ext_resource type="Texture2D" uid="uid://ca8q5kpu4cpnf" path="res://Assets/Generated/house_interior.png" id="1_hn0mf"]
 [ext_resource type="PackedScene" uid="uid://dkle68d2vdh7n" path="res://MainPC.tscn" id="2_j7qgo"]
+[ext_resource type="PackedScene" uid="uid://dfngd4wlcp66a" path="res://journal.tscn" id="4_bau6n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uk1ye"]
 size = Vector2(1210, 249)
@@ -13,6 +15,7 @@ size = Vector2(234, 866)
 size = Vector2(125, 253)
 
 [node name="InsideOfHouse" type="Node2D"]
+script = ExtResource("1_4m50j")
 
 [node name="HouseInterior" type="Sprite2D" parent="."]
 position = Vector2(578.375, 326)
@@ -46,3 +49,7 @@ scale = Vector2(2.28, 2.28)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseInteriorDoor"]
 position = Vector2(513.5, 321.5)
 shape = SubResource("RectangleShape2D_njq2p")
+
+[node name="Journal" parent="." instance=ExtResource("4_bau6n")]
+visible = false
+z_index = 3

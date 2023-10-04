@@ -1,3 +1,9 @@
+Line2D
+Control
+Label
+Polygon2D
+Container
+ColorRect
 AnimatedSprite2D
 AnimationPlayer
 CollisionShape2D
@@ -5,7 +11,6 @@ Marker2D
 Area2D
 StaticBody2D
 RigidBody2D
-ColorRect
 Node
 Node2D
 CharacterBody2D

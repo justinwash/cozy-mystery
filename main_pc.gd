@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 150.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -8,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var interactable = null
 
 func _physics_process(delta):
+    
   if Input.is_action_just_pressed("interact"):
     if interactable == "HouseDoor":
       get_tree().root.get_node("Town").queue_free()

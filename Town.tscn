@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://d3hmy4nevu5b2"]
 
-[ext_resource type="Script" path="res://town.gd" id="1_5usvy"]
-[ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="1_bwh1c"]
-[ext_resource type="Texture2D" uid="uid://b58ife34bt2yt" path="res://Assets/Generated/house.png" id="2_uaykp"]
-[ext_resource type="Texture2D" uid="uid://bdfcbttthmfcf" path="res://Assets/Generated/library.png" id="3_iugs8"]
-[ext_resource type="PackedScene" uid="uid://dkle68d2vdh7n" path="res://MainPC.tscn" id="4_nenwb"]
+[ext_resource type="Script" path="res://town.gd" id="1_11ywr"]
+[ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="2_feeub"]
+[ext_resource type="Texture2D" uid="uid://b58ife34bt2yt" path="res://Assets/Generated/house.png" id="3_e020h"]
+[ext_resource type="Texture2D" uid="uid://bdfcbttthmfcf" path="res://Assets/Generated/library.png" id="4_5maau"]
+[ext_resource type="PackedScene" uid="uid://dkle68d2vdh7n" path="res://MainPC.tscn" id="5_36d7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhs3s"]
 size = Vector2(1178, 346)
@@ -70,7 +70,7 @@ _data = {
 }
 
 [node name="Town" type="Node2D"]
-script = ExtResource("1_5usvy")
+script = ExtResource("1_11ywr")
 trigger_animation = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -103,27 +103,27 @@ color = Color(0, 0.45098, 0.709804, 1)
 [node name="Sidewalk" type="Sprite2D" parent="."]
 position = Vector2(160, 488)
 scale = Vector2(0.31543, 0.31543)
-texture = ExtResource("1_bwh1c")
+texture = ExtResource("2_feeub")
 
 [node name="Sidewalk2" type="Sprite2D" parent="."]
 position = Vector2(480, 488)
 scale = Vector2(0.31543, 0.31543)
-texture = ExtResource("1_bwh1c")
+texture = ExtResource("2_feeub")
 
 [node name="Sidewalk3" type="Sprite2D" parent="."]
 position = Vector2(800, 488)
 scale = Vector2(0.31543, 0.31543)
-texture = ExtResource("1_bwh1c")
+texture = ExtResource("2_feeub")
 
 [node name="Sidewalk4" type="Sprite2D" parent="."]
 position = Vector2(1120, 488)
 scale = Vector2(0.31543, 0.31543)
-texture = ExtResource("1_bwh1c")
+texture = ExtResource("2_feeub")
 
 [node name="House" type="Sprite2D" parent="."]
 position = Vector2(871, 273)
 scale = Vector2(0.34082, 0.34082)
-texture = ExtResource("2_uaykp")
+texture = ExtResource("3_e020h")
 
 [node name="HouseDoor" type="Area2D" parent="House"]
 
@@ -134,9 +134,9 @@ shape = SubResource("RectangleShape2D_8gvg6")
 [node name="Library" type="Sprite2D" parent="."]
 position = Vector2(277, 274)
 scale = Vector2(0.461914, 0.461914)
-texture = ExtResource("3_iugs8")
+texture = ExtResource("4_5maau")
 
-[node name="MainPC" parent="." instance=ExtResource("4_nenwb")]
+[node name="MainPC" parent="." instance=ExtResource("5_36d7f")]
 position = Vector2(31, 432)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]

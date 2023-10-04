@@ -1,0 +1,283 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfngd4wlcp66a"]
+
+[ext_resource type="FontFile" uid="uid://b11mv2c852s00" path="res://Fonts/Winter Market.otf" id="1_ydopm"]
+
+[node name="Journal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PagePanel" type="Control" parent="."]
+z_index = -1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TodoPage" type="ColorRect" parent="PagePanel"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 24.0
+offset_right = 1112.0
+offset_bottom = 608.0
+color = Color(1, 1, 0.8, 1)
+
+[node name="Label" type="Label" parent="PagePanel/TodoPage"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 81
+text = "TO DO:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="PagePanel/TodoPage"]
+position = Vector2(0, 8)
+points = PackedVector2Array(0, 64, 120.893, 64, 512, 64)
+width = 3.0
+default_color = Color(0.0941176, 0.329412, 1, 1)
+
+[node name="BackgroundPage" type="ColorRect" parent="PagePanel/TodoPage"]
+z_index = -1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 592.0
+color = Color(1, 1, 0.8, 1)
+
+[node name="Label" type="Label" parent="PagePanel/TodoPage/BackgroundPage"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 81
+text = "TO DO:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="PagePanel/TodoPage/BackgroundPage"]
+position = Vector2(0, 8)
+points = PackedVector2Array(0, 64, 120.893, 64, 512, 64)
+width = 3.0
+default_color = Color(0.0941176, 0.329412, 1, 1)
+
+[node name="BackgroundPage2" type="ColorRect" parent="PagePanel/TodoPage/BackgroundPage"]
+z_index = -2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 592.0
+color = Color(1, 1, 0.8, 1)
+
+[node name="Label" type="Label" parent="PagePanel/TodoPage/BackgroundPage/BackgroundPage2"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 81
+text = "TO DO:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="PagePanel/TodoPage/BackgroundPage/BackgroundPage2"]
+position = Vector2(0, 8)
+points = PackedVector2Array(0, 64, 120.893, 64, 512, 64)
+width = 3.0
+default_color = Color(0.0941176, 0.329412, 1, 1)
+
+[node name="Checkboxes" type="Control" parent="PagePanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Checkbox" type="Line2D" parent="PagePanel/Checkboxes"]
+position = Vector2(8, 24)
+points = PackedVector2Array(624, 120, 624, 144, 656, 152, 656, 120, 639.352, 120, 624, 120)
+width = 3.0
+default_color = Color(0, 0.211765, 1, 1)
+
+[node name="Checkbox2" type="Line2D" parent="PagePanel/Checkboxes"]
+position = Vector2(8, 120)
+points = PackedVector2Array(624, 120, 624, 144, 656, 152, 656, 120, 639.352, 120, 624, 120)
+width = 3.0
+default_color = Color(0, 0.211765, 1, 1)
+
+[node name="Checkbox3" type="Line2D" parent="PagePanel/Checkboxes"]
+position = Vector2(8, 216)
+points = PackedVector2Array(624, 120, 624, 144, 656, 152, 656, 120, 639.352, 120, 624, 120)
+width = 3.0
+default_color = Color(0, 0.211765, 1, 1)
+
+[node name="TaskOptions" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 584.0
+offset_bottom = 600.0
+
+[node name="TaskOption1" type="Control" parent="TaskOptions"]
+anchors_preset = 0
+offset_left = 112.0
+offset_top = -16.0
+offset_right = 552.0
+offset_bottom = 72.0
+
+[node name="Foreground" type="Polygon2D" parent="TaskOptions/TaskOption1"]
+position = Vector2(0, 32)
+scale = Vector2(0.901639, 0.769231)
+polygon = PackedVector2Array(0, 40, 32, 56, 72, 64, 112, 56, 184, 64, 280, 56, 352, 64, 392, 48, 440, 64, 488, 40, 464, 0, 456, -24, 416, -32, 392, -40, 336, -40, 280, -32, 216, -40, 112, -32, 80, -40, 16, -40, 0, -24, 16, 0)
+
+[node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption1/Foreground"]
+z_index = -1
+position = Vector2(10.6182, 8.80002)
+color = Color(0.6, 0.6, 0.6, 0.392157)
+polygon = PackedVector2Array(0, 40, 32, 56, 72, 64, 112, 56, 184, 64, 280, 56, 352, 64, 392, 48, 440, 64, 488, 40, 464, 0, 456, -24, 416, -32, 392, -40, 336, -40, 280, -32, 216, -40, 112, -32, 80, -40, 16, -40, 0, -24, 16, 0)
+
+[node name="Label" type="Label" parent="TaskOptions/TaskOption1"]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 56
+text = "Learn Town History"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TaskOption2" type="Control" parent="TaskOptions"]
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 96.0
+offset_right = 440.0
+offset_bottom = 184.0
+
+[node name="Foreground" type="Polygon2D" parent="TaskOptions/TaskOption2"]
+position = Vector2(-14.4262, 30.7692)
+scale = Vector2(0.901639, 0.769231)
+polygon = PackedVector2Array(44.3636, 31.2, 53.2364, 52, 72, 64, 112, 56, 186.327, 52, 280, 56, 352, 64, 392, 48, 440, 64, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 392, -40, 328.291, -20.8, 280, -32, 204.073, -31.2, 150.836, -20.8, 62.1091, -20.8, 44.3636, -31.2, 26.6182, -10.4, 16, 0)
+
+[node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption2/Foreground"]
+z_index = -1
+position = Vector2(10.6182, 8.80002)
+color = Color(0.6, 0.6, 0.6, 0.392157)
+polygon = PackedVector2Array(44.3636, 31.2, 53.2364, 52, 72, 64, 112, 56, 186.327, 52, 280, 56, 352, 64, 392, 48, 440, 64, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 392, -40, 328.291, -20.8, 280, -32, 204.073, -31.2, 150.836, -20.8, 62.1091, -20.8, 44.3636, -31.2, 26.6182, -10.4, 16, 0)
+
+[node name="Label" type="Label" parent="TaskOptions/TaskOption2"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 424.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 56
+text = "Talk to Sheriff"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TaskOption3" type="Control" parent="TaskOptions"]
+anchors_preset = 0
+offset_left = 112.0
+offset_top = 224.0
+offset_right = 496.0
+offset_bottom = 328.0
+
+[node name="Foreground" type="Polygon2D" parent="TaskOptions/TaskOption3"]
+position = Vector2(-4.71355, 31.6213)
+scale = Vector2(0.794598, 0.988165)
+polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 280, 56, 322.175, 48.5749, 392.651, 56.6707, 440, 64, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 372.515, -24.2874, 328.291, -20.8, 261.768, -24.2874, 204.073, -31.2, 150.836, -20.8, 62.1091, -20.8, 44.3636, -31.2, 26.6182, -10.4, 16, 0)
+
+[node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption3/Foreground"]
+z_index = -1
+position = Vector2(12.0486, 6.85028)
+scale = Vector2(1, 1)
+color = Color(0.6, 0.6, 0.6, 0.392157)
+polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 280, 56, 322.175, 48.5749, 392.651, 56.6707, 440, 64, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 372.515, -24.2874, 328.291, -20.8, 261.768, -24.2874, 204.073, -31.2, 150.836, -20.8, 62.1091, -20.8, 44.3636, -31.2, 26.6182, -10.4, 16, 0)
+
+[node name="Label" type="Label" parent="TaskOptions/TaskOption3"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 8.0
+offset_right = 408.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 56
+text = "Get Groceries"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TaskOption4" type="Control" parent="TaskOptions"]
+layout_mode = 1
+offset_left = 64.0
+offset_top = 328.0
+offset_right = 448.0
+offset_bottom = 432.0
+
+[node name="Foreground" type="Polygon2D" parent="TaskOptions/TaskOption4"]
+position = Vector2(-27.2513, 37.0809)
+scale = Vector2(0.794598, 1.15878)
+polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 251.7, 43.9421, 322.175, 48.5749, 362.447, 37.0383, 422.855, 50.846, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 372.515, -24.2874, 328.291, -20.8, 261.768, -24.2874, 201.36, -11.2885, 150.836, -20.8, 62.1091, -20.8, 50.3399, -11.2885, 70.4758, 2.51913, 60.4079, 16.3268)
+
+[node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption4/Foreground"]
+z_index = -1
+position = Vector2(12.0486, 5.84171)
+color = Color(0.6, 0.6, 0.6, 0.392157)
+polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 251.7, 43.9421, 322.175, 48.5749, 362.447, 37.0383, 422.855, 50.846, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 372.515, -24.2874, 328.291, -20.8, 261.768, -24.2874, 201.36, -11.2885, 150.836, -20.8, 62.1091, -20.8, 50.3399, -11.2885, 70.4758, 2.51913, 60.4079, 16.3268)
+
+[node name="Label" type="Label" parent="TaskOptions/TaskOption4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.125
+anchor_top = -3.549
+anchor_right = -0.125
+anchor_bottom = -3.549
+offset_left = 16.0
+offset_top = 385.096
+offset_right = 440.0
+offset_bottom = 457.096
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 56
+text = "Walk The Dog"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TaskOption5" type="Control" parent="TaskOptions"]
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 440.0
+offset_right = 488.0
+offset_bottom = 544.0
+
+[node name="Foreground" type="Polygon2D" parent="TaskOptions/TaskOption5"]
+position = Vector2(-40.8163, 32.1026)
+scale = Vector2(0.92004, 1.15878)
+polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 251.7, 43.9421, 322.175, 48.5749, 362.447, 37.0383, 422.855, 50.846, 452.509, 31.2, 479.127, 0, 455.365, -13.8077, 407.842, -6.90384, 360.319, -13.8077, 328.291, -20.8, 265.272, -6.90384, 201.36, -11.2885, 134.582, -6.90384, 87.0586, -6.90384, 50.3399, -11.2885, 70.4758, 2.51913, 60.4079, 16.3268)
+
+[node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption5/Foreground"]
+z_index = -1
+position = Vector2(10.4058, 5.84171)
+scale = Vector2(1, 1)
+color = Color(0.6, 0.6, 0.6, 0.392157)
+polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 251.7, 43.9421, 322.175, 48.5749, 362.447, 37.0383, 422.855, 50.846, 452.509, 31.2, 479.127, 0, 455.365, -13.8077, 407.842, -6.90384, 360.319, -13.8077, 328.291, -20.8, 265.272, -6.90384, 201.36, -11.2885, 134.582, -6.90384, 87.0586, -6.90384, 50.3399, -11.2885, 70.4758, 2.51913, 60.4079, 16.3268)
+
+[node name="Label" type="Label" parent="TaskOptions/TaskOption5"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 16.0
+offset_right = 416.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ydopm")
+theme_override_font_sizes/font_size = 56
+text = "CLEAN?"
+horizontal_alignment = 1
+vertical_alignment = 1
