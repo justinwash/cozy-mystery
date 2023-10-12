@@ -1,6 +1,9 @@
-res://MainPC.tscn
 res://main_pc.gd
+res://DialogManager.tscn
+res://Town.tscn
+res://MainPC.tscn
 res://InsideOfHouse.tscn
 res://AubreyLearnsToCode.tscn
 res://journal.tscn
-res://Town.tscn
+res://DialogManager.gd
+res://Bakery.gd

@@ -1,12 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3m47fy1tsi58"]
+[gd_scene load_steps=20 format=3 uid="uid://c3m47fy1tsi58"]
 
 [ext_resource type="Script" path="res://town.gd" id="1_11ywr"]
 [ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="2_feeub"]
 [ext_resource type="Texture2D" uid="uid://bdfcbttthmfcf" path="res://Assets/Generated/library.png" id="4_5maau"]
 [ext_resource type="Texture2D" uid="uid://dfe0y8k6admk8" path="res://Assets/Art/Houses/brick_house.png" id="4_d684l"]
 [ext_resource type="Texture2D" uid="uid://benkyn56h488y" path="res://Assets/Art/Houses/bakery.png" id="5_1okqe"]
+[ext_resource type="Script" path="res://Bakery.gd" id="5_2uyrp"]
 [ext_resource type="PackedScene" uid="uid://dkle68d2vdh7n" path="res://MainPC.tscn" id="5_36d7f"]
 [ext_resource type="Texture2D" uid="uid://cupnputqcwm4j" path="res://Assets/Art/Houses/jewlery_store.png" id="7_1qbo1"]
+[ext_resource type="PackedScene" uid="uid://b42db832lb7t6" path="res://DialogManager.tscn" id="8_vytj3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qeqpb"]
 size = Vector2(1176, 161)
@@ -34,6 +36,9 @@ size = Vector2(196.25, 570.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhlif"]
 size = Vector2(944, 64.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0rwt"]
+size = Vector2(200, 422.792)
 
 [node name="Town" type="Node2D"]
 scale = Vector2(2.335, 2.335)
@@ -198,11 +203,18 @@ texture_filter = 2
 position = Vector2(565, 93)
 scale = Vector2(0.115, 0.115)
 texture = ExtResource("5_1okqe")
+script = ExtResource("5_2uyrp")
 
 [node name="Polygon2D" type="Polygon2D" parent="Bakery"]
 show_behind_parent = true
 texture_filter = 6
 polygon = PackedVector2Array(-365.217, -895.652, -347.826, -860.87, -304.348, -860.87, -478.261, -426.087, -530.435, -434.783, -521.739, -391.304, -495.652, -347.826, -460.87, -330.435, -469.565, -304.348, -434.783, -286.957, -460.87, 869.565, 626.087, 904.348, 660.87, 269.565, 652.174, -295.652, 652.174, -330.435, 686.957, -347.826, 686.957, -382.609, 704.348, -408.696, 704.348, -452.174, 669.565, -452.174, 539.13, -869.565, 530.435, -895.652, 608.696, -895.652, 608.696, -939.13)
+
+[node name="Area2D" type="Area2D" parent="Bakery"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bakery/Area2D"]
+position = Vector2(111.247, 680.924)
+shape = SubResource("RectangleShape2D_q0rwt")
 
 [node name="JewleryStore" type="Sprite2D" parent="."]
 position = Vector2(663.383, 377.73)
@@ -239,3 +251,13 @@ texture_filter = 2
 zoom = Vector2(2.31, 2.31)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Dialog" type="CanvasLayer" parent="MainPC/Camera2D"]
+scale = Vector2(0.49, 0.49)
+transform = Transform2D(0.49, 0, 0, 0.49, 0, 0)
+
+[node name="DialogManager" parent="MainPC/Camera2D/Dialog" instance=ExtResource("8_vytj3")]
+visible = false
+scale = Vector2(2.05896, 2.05896)
+
+[connection signal="body_entered" from="Bakery/Area2D" to="Bakery" method="_on_area_2d_body_entered"]

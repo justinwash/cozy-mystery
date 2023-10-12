@@ -1,8 +1,12 @@
+CollisionShape2D
+Area2D
+CanvasLayer
+RichTextLabel
+Panel
 Node2D
 ColorRect
 Camera2D
 Polygon2D
-CollisionShape2D
 Line2D
 Control
 Label
@@ -10,7 +14,6 @@ Container
 AnimatedSprite2D
 AnimationPlayer
 Marker2D
-Area2D
 StaticBody2D
 RigidBody2D
 Node

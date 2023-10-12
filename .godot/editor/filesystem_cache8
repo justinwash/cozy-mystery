@@ -1,17 +1,94 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697080983
-AubreyLearnsToCode.tscn::PackedScene::9139773323659780581::1697080927::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
+::res://::1697081751
+AubreyLearnsToCode.tscn::PackedScene::9139773323659780581::1697081177::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
 default_env.tres::Environment::-1::1673218060::0::1::::<><>::
 icon.png::CompressedTexture2D::8854954685018542675::1673218060::1697077279::1::::<><>::
 InsideOfHouse.gd::GDScript::-1::1697077281::0::1::::<>Node2D<>::
-InsideOfHouse.tscn::PackedScene::6091397603439154255::1697080927::0::1::::<><>::uid://ca8q5kpu4cpnf::::res://Assets/Generated/house_interior.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://dfngd4wlcp66a::::res://journal.tscn
+InsideOfHouse.tscn::PackedScene::6091397603439154255::1697081177::0::1::::<><>::uid://ca8q5kpu4cpnf::::res://Assets/Generated/house_interior.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://dfngd4wlcp66a::::res://journal.tscn
 journal.gd::GDScript::-1::1697080774::0::1::::<>Control<>::
-journal.tscn::PackedScene::7537414397076495762::1697080927::0::1::::<><>::res://journal.gd<>uid://b11mv2c852s00::::res://Fonts/Winter Market.otf
-MainPC.tscn::PackedScene::7884158609496316785::1697080927::0::1::::<><>::res://main_pc.gd<>uid://bbqwm1ht3xuva::::res://Assets/Art/Player/player.png
-main_pc.gd::GDScript::-1::1697077691::0::1::::<>CharacterBody2D<>::
+journal.tscn::PackedScene::7537414397076495762::1697081177::0::1::::<><>::res://journal.gd<>uid://b11mv2c852s00::::res://Fonts/Winter Market.otf
+MainPC.tscn::PackedScene::7884158609496316785::1697081177::0::1::::<><>::res://main_pc.gd<>uid://bbqwm1ht3xuva::::res://Assets/Art/Player/player.png
+main_pc.gd::GDScript::-1::1697080990::0::1::::<>CharacterBody2D<>::
 TaskOption.gd::GDScript::-1::1697077281::0::1::::<>Polygon2D<>::
 town.gd::GDScript::-1::1697080482::0::1::::<>Node2D<>::
-Town.tscn::PackedScene::6764719761394496189::1697080927::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dfe0y8k6admk8::::res://Assets/Art/Houses/brick_house.png<>uid://benkyn56h488y::::res://Assets/Art/Houses/bakery.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://cupnputqcwm4j::::res://Assets/Art/Houses/jewlery_store.png
+Town.tscn::PackedScene::6764719761394496189::1697081178::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dfe0y8k6admk8::::res://Assets/Art/Houses/brick_house.png<>uid://benkyn56h488y::::res://Assets/Art/Houses/bakery.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://cupnputqcwm4j::::res://Assets/Art/Houses/jewlery_store.png
+::res://addons/::1697081638
+::res://addons/dialogic/::1697081730
+::res://addons/dialogic/Documentation/::1697081640
+::res://addons/dialogic/Documentation/Content/::1697081730
+::res://addons/dialogic/Documentation/Content/Events/::1697081730
+::res://addons/dialogic/Documentation/Content/Events/CustomEvents/::1697081730
+::res://addons/dialogic/Documentation/Content/Events/CustomEvents/Images/::1697081730
+::res://addons/dialogic/Documentation/Content/Events/Images/::1697081730
+::res://addons/dialogic/Documentation/Content/FAQ/::1697081730
+::res://addons/dialogic/Documentation/Content/Images/::1697081730
+::res://addons/dialogic/Documentation/Content/Reference/::1697081730
+::res://addons/dialogic/Documentation/Content/Reference/Images/::1697081730
+::res://addons/dialogic/Documentation/Content/Tutorials/::1697081730
+::res://addons/dialogic/Documentation/Content/Tutorials/Images/::1697081730
+::res://addons/dialogic/Documentation/Nodes/::1697081730
+::res://addons/dialogic/Documentation/Theme/::1697081730
+::res://addons/dialogic/Documentation/Theme/Font/::1697081730
+::res://addons/dialogic/Editor/::1697081730
+::res://addons/dialogic/Editor/CharacterEditor/::1697081730
+::res://addons/dialogic/Editor/Common/::1697081730
+::res://addons/dialogic/Editor/DocumentationViewer/::1697081730
+::res://addons/dialogic/Editor/Events/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/Audio/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/CallNode/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/Character/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/EventBlock/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/Images/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/Logic/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/NoSkip/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/Numbers/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Characters/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Definitions/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Files/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Scenes/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Themes/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Timelines/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/Text/::1697081730
+::res://addons/dialogic/Editor/Events/Parts/WaitSeconds/::1697081730
+::res://addons/dialogic/Editor/Events/styles/::1697081730
+::res://addons/dialogic/Editor/Events/Templates/::1697081730
+::res://addons/dialogic/Editor/GlossaryEntryEditor/::1697081730
+::res://addons/dialogic/Editor/MasterTree/::1697081730
+::res://addons/dialogic/Editor/SettingsEditor/::1697081730
+::res://addons/dialogic/Editor/SettingsEditor/Scenes/::1697081730
+::res://addons/dialogic/Editor/Theme/::1697081731
+::res://addons/dialogic/Editor/ThemeEditor/::1697081731
+::res://addons/dialogic/Editor/TimelineEditor/::1697081731
+::res://addons/dialogic/Editor/ValueEditor/::1697081731
+::res://addons/dialogic/Example Assets/::1697081643
+::res://addons/dialogic/Example Assets/backgrounds/::1697081731
+::res://addons/dialogic/Example Assets/CustomEvents/::1697081731
+::res://addons/dialogic/Example Assets/Fonts/::1697081731
+::res://addons/dialogic/Example Assets/Fonts/Overlock/::1697081731
+::res://addons/dialogic/Example Assets/History/::1697081731
+::res://addons/dialogic/Example Assets/next-indicator/::1697081731
+::res://addons/dialogic/Example Assets/portraits/::1697081731
+::res://addons/dialogic/Example Assets/Sound Effects/::1697081731
+::res://addons/dialogic/Example Assets/Sound Effects/Keyboard Noises/::1697081731
+::res://addons/dialogic/Images/::1697081644
+::res://addons/dialogic/Images/Context Menus/::1697081731
+::res://addons/dialogic/Images/Event Icons/::1697081731
+::res://addons/dialogic/Images/Event Icons/Main Icons/::1697081731
+::res://addons/dialogic/Images/Pieces/::1697081731
+::res://addons/dialogic/Images/Plugin/::1697081731
+::res://addons/dialogic/Images/Resources/::1697081731
+::res://addons/dialogic/Images/Toolbar/::1697081731
+::res://addons/dialogic/Images/Tutorials/::1697081731
+::res://addons/dialogic/Localization/::1697081731
+::res://addons/dialogic/Nodes/::1697081731
+::res://addons/dialogic/Nodes/Anima/::1697081731
+::res://addons/dialogic/Nodes/Anima/animations/::1697081645
+::res://addons/dialogic/Nodes/Anima/animations/attention_seeker/::1697081731
+::res://addons/dialogic/Nodes/Anima/animations/entrances_and_exits/::1697081731
+::res://addons/dialogic/Other/::1697081731
+::res://addons/dialogic/Parser/::1697081731
 ::res://Assets/::1673306900
 ::res://Assets/Art/::1697078958
 ::res://Assets/Art/Houses/::1697077662
