@@ -1,7 +1,6 @@
-res://Town.tscn
-res://main_pc.gd
 res://MainPC.tscn
+res://main_pc.gd
 res://InsideOfHouse.tscn
-res://journal.tscn
 res://AubreyLearnsToCode.tscn
-res://town.gd
+res://journal.tscn
+res://Town.tscn

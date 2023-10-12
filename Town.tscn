@@ -40,124 +40,150 @@ scale = Vector2(2.335, 2.335)
 script = ExtResource("1_11ywr")
 trigger_animation = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1160.0
-offset_bottom = 668.0
-color = Color(0, 0.45098, 0.709804, 1)
-metadata/_edit_use_anchors_ = true
+[node name="Background" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_left = -673.0
+offset_top = -538.0
+offset_right = 1640.0
+offset_bottom = 194.0
+color = Color(0.678431, 0.843137, 1, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+offset_left = -669.0
+offset_top = 148.0
+offset_right = 1637.0
+offset_bottom = 600.0
+color = Color(0.678431, 0.843137, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Background"]
+offset_left = 179.0
+offset_top = 235.0
+offset_right = 1641.0
+offset_bottom = 511.0
+color = Color(0, 0.537255, 0.384314, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Background"]
+offset_left = -758.0
+offset_top = 598.0
+offset_right = 1892.0
+offset_bottom = 874.0
+color = Color(0, 0.537255, 0.384314, 1)
+
+[node name="Colliders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(578, 70.5)
 shape = SubResource("RectangleShape2D_qeqpb")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(643.04, 325.136)
 shape = SubResource("RectangleShape2D_b5myj")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(243, 299)
 rotation = -0.520461
 shape = SubResource("RectangleShape2D_06jjo")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(263.812, 361.028)
 rotation = -2.59688
 shape = SubResource("RectangleShape2D_tjdse")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(233.535, 334.035)
 rotation = -1.54987
 shape = SubResource("RectangleShape2D_0ljuf")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(318.421, 332.434)
 rotation = -1.54987
 shape = SubResource("RectangleShape2D_vpdbb")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(3, 413)
 shape = SubResource("RectangleShape2D_nfffg")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(1068.88, 389.875)
 shape = SubResource("RectangleShape2D_2f3ny")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(546, 607.063)
 shape = SubResource("RectangleShape2D_fhlif")
 
-[node name="Sidewalk" type="Sprite2D" parent="."]
+[node name="Sidewalks" type="Node2D" parent="."]
+
+[node name="Sidewalk" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(200, 240)
 rotation = -0.523598
 scale = Vector2(0.214112, 0.197802)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk5" type="Sprite2D" parent="."]
+[node name="Sidewalk5" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(347.264, 211.264)
 scale = Vector2(0.147, 0.147)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk6" type="Sprite2D" parent="."]
+[node name="Sidewalk6" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(635.264, 211.264)
 scale = Vector2(0.147, 0.147)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk2" type="Sprite2D" parent="."]
+[node name="Sidewalk2" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(491.264, 211.264)
 scale = Vector2(0.147, 0.147)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk3" type="Sprite2D" parent="."]
+[node name="Sidewalk3" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(779.264, 211.264)
 scale = Vector2(0.147, 0.147)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk4" type="Sprite2D" parent="."]
+[node name="Sidewalk4" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(923.264, 211.264)
 scale = Vector2(0.147, 0.147)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk9" type="Sprite2D" parent="."]
+[node name="Sidewalk9" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(336, 536)
 scale = Vector2(0.147, 0.269)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk10" type="Sprite2D" parent="."]
+[node name="Sidewalk10" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(624, 536)
 scale = Vector2(0.147, 0.269)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk11" type="Sprite2D" parent="."]
+[node name="Sidewalk11" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(480, 536)
 scale = Vector2(0.147, 0.269)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk14" type="Sprite2D" parent="."]
+[node name="Sidewalk14" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(128, 434)
 rotation = -1.57079
 scale = Vector2(0.124379, 0.258274)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk7" type="Sprite2D" parent="."]
+[node name="Sidewalk7" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(128, 336)
 rotation = -1.57079
 scale = Vector2(0.124379, 0.258274)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk12" type="Sprite2D" parent="."]
+[node name="Sidewalk12" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(768, 536)
 scale = Vector2(0.147, 0.269)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk8" type="Sprite2D" parent="."]
+[node name="Sidewalk8" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(224, 496)
 rotation = 0.523598
 scale = Vector2(0.192, 0.293)
 texture = ExtResource("2_feeub")
 
-[node name="Sidewalk13" type="Sprite2D" parent="."]
+[node name="Sidewalk13" type="Sprite2D" parent="Sidewalks"]
 position = Vector2(912, 537.148)
 scale = Vector2(0.147, 0.269)
 texture = ExtResource("2_feeub")
@@ -177,6 +203,19 @@ texture = ExtResource("5_1okqe")
 show_behind_parent = true
 texture_filter = 6
 polygon = PackedVector2Array(-365.217, -895.652, -347.826, -860.87, -304.348, -860.87, -478.261, -426.087, -530.435, -434.783, -521.739, -391.304, -495.652, -347.826, -460.87, -330.435, -469.565, -304.348, -434.783, -286.957, -460.87, 869.565, 626.087, 904.348, 660.87, 269.565, 652.174, -295.652, 652.174, -330.435, 686.957, -347.826, 686.957, -382.609, 704.348, -408.696, 704.348, -452.174, 669.565, -452.174, 539.13, -869.565, 530.435, -895.652, 608.696, -895.652, 608.696, -939.13)
+
+[node name="JewleryStore" type="Sprite2D" parent="."]
+position = Vector2(663.383, 377.73)
+scale = Vector2(0.209195, 0.209195)
+texture = ExtResource("7_1qbo1")
+
+[node name="Polygon2D" type="Polygon2D" parent="JewleryStore"]
+show_behind_parent = true
+polygon = PackedVector2Array(-380.781, -319.364, -384.876, 579.359, 61.4153, 595.737, 73.6987, 616.209, 266.136, 628.492, 268.183, 601.879, 255.9, -325.506)
+
+[node name="Polygon2D2" type="Polygon2D" parent="JewleryStore"]
+show_behind_parent = true
+polygon = PackedVector2Array(366.449, 448.338, 333.694, 464.716, 331.647, 483.141, 335.741, 503.613, 325.505, 517.943, 333.694, 536.368, 335.741, 552.746, 325.505, 565.029, 333.694, 579.359, 354.166, 616.209, 358.26, 642.823, 348.024, 646.917, 341.883, 655.106, 364.402, 661.248, 386.921, 667.389, 401.252, 659.201, 388.969, 646.917, 399.205, 608.02, 411.488, 573.218, 407.393, 548.651, 407.393, 532.274, 411.488, 517.943, 393.063, 513.849, 413.535, 493.377, 413.535, 466.763, 397.157, 454.48)
 
 [node name="BrickHouse" type="Sprite2D" parent="."]
 texture_filter = 2
@@ -200,16 +239,3 @@ texture_filter = 2
 zoom = Vector2(2.31, 2.31)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
-
-[node name="JewleryStore" type="Sprite2D" parent="."]
-position = Vector2(663.383, 377.73)
-scale = Vector2(0.209195, 0.209195)
-texture = ExtResource("7_1qbo1")
-
-[node name="Polygon2D" type="Polygon2D" parent="JewleryStore"]
-show_behind_parent = true
-polygon = PackedVector2Array(-380.781, -319.364, -384.876, 579.359, 61.4153, 595.737, 73.6987, 616.209, 266.136, 628.492, 268.183, 601.879, 255.9, -325.506)
-
-[node name="Polygon2D2" type="Polygon2D" parent="JewleryStore"]
-show_behind_parent = true
-polygon = PackedVector2Array(366.449, 448.338, 333.694, 464.716, 331.647, 483.141, 335.741, 503.613, 325.505, 517.943, 333.694, 536.368, 335.741, 552.746, 325.505, 565.029, 333.694, 579.359, 354.166, 616.209, 358.26, 642.823, 348.024, 646.917, 341.883, 655.106, 364.402, 661.248, 386.921, 667.389, 401.252, 659.201, 388.969, 646.917, 399.205, 608.02, 411.488, 573.218, 407.393, 548.651, 407.393, 532.274, 411.488, 517.943, 393.063, 513.849, 413.535, 493.377, 413.535, 466.763, 397.157, 454.48)

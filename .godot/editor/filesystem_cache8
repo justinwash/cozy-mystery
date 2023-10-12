@@ -1,16 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697078917
-AubreyLearnsToCode.tscn::PackedScene::9139773323659780581::1697078895::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
+::res://::1697080983
+AubreyLearnsToCode.tscn::PackedScene::9139773323659780581::1697080927::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
 default_env.tres::Environment::-1::1673218060::0::1::::<><>::
 icon.png::CompressedTexture2D::8854954685018542675::1673218060::1697077279::1::::<><>::
 InsideOfHouse.gd::GDScript::-1::1697077281::0::1::::<>Node2D<>::
-InsideOfHouse.tscn::PackedScene::6091397603439154255::1697078895::0::1::::<><>::res://InsideOfHouse.gd<>uid://ca8q5kpu4cpnf::::res://Assets/Generated/house_interior.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://dfngd4wlcp66a::::res://journal.tscn
-journal.tscn::PackedScene::7537414397076495762::1697078895::0::1::::<><>::uid://b11mv2c852s00::::res://Fonts/Winter Market.otf
-MainPC.tscn::PackedScene::7884158609496316785::1697078895::0::1::::<><>::res://main_pc.gd<>uid://bh4jjuqj5rkwi::::res://Assets/Generated/character.png
+InsideOfHouse.tscn::PackedScene::6091397603439154255::1697080927::0::1::::<><>::uid://ca8q5kpu4cpnf::::res://Assets/Generated/house_interior.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://dfngd4wlcp66a::::res://journal.tscn
+journal.gd::GDScript::-1::1697080774::0::1::::<>Control<>::
+journal.tscn::PackedScene::7537414397076495762::1697080927::0::1::::<><>::res://journal.gd<>uid://b11mv2c852s00::::res://Fonts/Winter Market.otf
+MainPC.tscn::PackedScene::7884158609496316785::1697080927::0::1::::<><>::res://main_pc.gd<>uid://bbqwm1ht3xuva::::res://Assets/Art/Player/player.png
 main_pc.gd::GDScript::-1::1697077691::0::1::::<>CharacterBody2D<>::
 TaskOption.gd::GDScript::-1::1697077281::0::1::::<>Polygon2D<>::
-town.gd::GDScript::-1::1697077872::0::1::::<>Node2D<>::
-Town.tscn::PackedScene::6764719761394496189::1697078917::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://benkyn56h488y::::res://Assets/Art/Houses/bakery.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
+town.gd::GDScript::-1::1697080482::0::1::::<>Node2D<>::
+Town.tscn::PackedScene::6764719761394496189::1697080927::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dfe0y8k6admk8::::res://Assets/Art/Houses/brick_house.png<>uid://benkyn56h488y::::res://Assets/Art/Houses/bakery.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://cupnputqcwm4j::::res://Assets/Art/Houses/jewlery_store.png
 ::res://Assets/::1673306900
 ::res://Assets/Art/::1697078958
 ::res://Assets/Art/Houses/::1697077662
@@ -21,7 +22,7 @@ jewlery_store.png::CompressedTexture2D::6208401094821089699::1697077411::1697077
 layer1.png::CompressedTexture2D::918538056581849852::1673218060::1697077279::1::::<><>::
 layer2.png::CompressedTexture2D::6830704554510384336::1673218060::1697077279::1::::<><>::
 layer3.png::CompressedTexture2D::3734836881734019425::1673218060::1697077279::1::::<><>::
-::res://Assets/Art/Player/::1697078958
+::res://Assets/Art/Player/::1697078961
 player.png::CompressedTexture2D::2490998152086163762::1697078934::1697078961::1::::<><>::
 ::res://Assets/Art/Tiles/::1697077279
 bad-block.png::CompressedTexture2D::5818093110555422524::1673218060::1697077279::1::::<><>::

@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfngd4wlcp66a"]
+[gd_scene load_steps=3 format=3 uid="uid://dfngd4wlcp66a"]
 
+[ext_resource type="Script" path="res://journal.gd" id="1_rmpkx"]
 [ext_resource type="FontFile" uid="uid://b11mv2c852s00" path="res://Fonts/Winter Market.otf" id="1_ydopm"]
 
 [node name="Journal" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rmpkx")
 
 [node name="PagePanel" type="Control" parent="."]
 z_index = -1

@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs1yotoj6mril"]
+[gd_scene load_steps=7 format=3 uid="uid://cs1yotoj6mril"]
 
-[ext_resource type="Script" path="res://InsideOfHouse.gd" id="1_4m50j"]
 [ext_resource type="Texture2D" uid="uid://ca8q5kpu4cpnf" path="res://Assets/Generated/house_interior.png" id="1_hn0mf"]
 [ext_resource type="PackedScene" uid="uid://dkle68d2vdh7n" path="res://MainPC.tscn" id="2_j7qgo"]
 [ext_resource type="PackedScene" uid="uid://dfngd4wlcp66a" path="res://journal.tscn" id="4_bau6n"]
@@ -15,7 +14,6 @@ size = Vector2(234, 866)
 size = Vector2(125, 253)
 
 [node name="InsideOfHouse" type="Node2D"]
-script = ExtResource("1_4m50j")
 
 [node name="HouseInterior" type="Sprite2D" parent="."]
 position = Vector2(578.375, 326)
