@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://town.gd" id="1_11ywr"]
 [ext_resource type="Texture2D" uid="uid://dv65lht83lbfs" path="res://Assets/Generated/sidewalk.png" id="2_feeub"]
-[ext_resource type="Texture2D" uid="uid://b58ife34bt2yt" path="res://Assets/Generated/house.png" id="3_e020h"]
+[ext_resource type="Texture2D" uid="uid://fwykwob3a5m6" path="res://Assets/Art/Houses/yellow_house.png" id="3_nviy1"]
 [ext_resource type="Texture2D" uid="uid://bdfcbttthmfcf" path="res://Assets/Generated/library.png" id="4_5maau"]
 [ext_resource type="PackedScene" uid="uid://dkle68d2vdh7n" path="res://MainPC.tscn" id="5_36d7f"]
 
@@ -16,7 +16,7 @@ size = Vector2(34, 706)
 size = Vector2(1178, 354)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gvg6"]
-size = Vector2(217.722, 265.267)
+size = Vector2(217.722, 415.011)
 
 [sub_resource type="Animation" id="Animation_tob8b"]
 length = 0.001
@@ -121,14 +121,16 @@ scale = Vector2(0.31543, 0.31543)
 texture = ExtResource("2_feeub")
 
 [node name="House" type="Sprite2D" parent="."]
-position = Vector2(871, 273)
-scale = Vector2(0.34082, 0.34082)
-texture = ExtResource("3_e020h")
+texture_filter = 4
+position = Vector2(832, 224)
+scale = Vector2(0.254978, 0.254978)
+texture = ExtResource("3_nviy1")
+region_filter_clip_enabled = true
 
 [node name="HouseDoor" type="Area2D" parent="House"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House/HouseDoor"]
-position = Vector2(-12.0356, 372.631)
+position = Vector2(94.1257, 709.51)
 shape = SubResource("RectangleShape2D_8gvg6")
 
 [node name="Library" type="Sprite2D" parent="."]

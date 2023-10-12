@@ -1,15 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696386169
+::res://::1696994352
 default_env.tres::Environment::-1::1696383596::0::1::::<><>::
 icon.png::CompressedTexture2D::8854954685018542675::1696383596::1696383596::1::::<><>::
-InsideOfHouse.tscn::PackedScene::6091397603439154255::1696383800::0::1::::<><>::uid://ca8q5kpu4cpnf::::res://Assets/Generated/house_interior.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
-MainPC.tscn::PackedScene::7884158609496316785::1696383800::0::1::::<><>::res://main_pc.gd<>uid://bh4jjuqj5rkwi::::res://Assets/Generated/character.png
-main_pc.gd::GDScript::-1::1696383699::0::1::::<>CharacterBody2D<>::
+InsideOfHouse.gd::GDScript::-1::1696389312::0::1::::<>Node2D<>::
+InsideOfHouse.tscn::PackedScene::6091397603439154255::1696994352::0::1::::<><>::res://InsideOfHouse.gd<>uid://ca8q5kpu4cpnf::::res://Assets/Generated/house_interior.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn<>uid://dfngd4wlcp66a::::res://journal.tscn
+journal.tscn::PackedScene::7537414397076495762::1696994352::0::1::::<><>::uid://b11mv2c852s00::::res://Fonts/Winter Market.otf
+MainPC.tscn::PackedScene::7884158609496316785::1696994352::0::1::::<><>::res://main_pc.gd<>uid://bh4jjuqj5rkwi::::res://Assets/Generated/character.png
+main_pc.gd::GDScript::-1::1696994313::0::1::::<>CharacterBody2D<>::
 TaskOption.gd::GDScript::-1::1696385157::0::1::::<>Polygon2D<>::
 town.gd::GDScript::-1::1696383596::0::1::::<>Node2D<>::
-Town.tscn::PackedScene::9139773323659780581::1696383800::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://b58ife34bt2yt::::res://Assets/Generated/house.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
+Town.tscn::PackedScene::9139773323659780581::1696994381::0::1::::<><>::res://town.gd<>uid://dv65lht83lbfs::::res://Assets/Generated/sidewalk.png<>uid://fwykwob3a5m6::::res://Assets/Art/Houses/yellow_house.png<>uid://bdfcbttthmfcf::::res://Assets/Generated/library.png<>uid://dkle68d2vdh7n::::res://MainPC.tscn
 ::res://Assets/::1696383595
-::res://Assets/Art/::1696383595
+::res://Assets/Art/::1696993803
+::res://Assets/Art/Houses/::1696994269
+yellow_house.png::CompressedTexture2D::397836771768774031::1696994233::1696994416::1::::<><>::
 ::res://Assets/Art/Placeholder/::1696383595
 layer1.png::CompressedTexture2D::918538056581849852::1696383595::1696383595::1::::<><>::
 layer2.png::CompressedTexture2D::6830704554510384336::1696383595::1696383595::1::::<><>::

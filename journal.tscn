@@ -197,7 +197,6 @@ polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 
 [node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption3/Foreground"]
 z_index = -1
 position = Vector2(12.0486, 6.85028)
-scale = Vector2(1, 1)
 color = Color(0.6, 0.6, 0.6, 0.392157)
 polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 280, 56, 322.175, 48.5749, 392.651, 56.6707, 440, 64, 452.509, 31.2, 479.127, 0, 461.382, -31.2, 416, -32, 372.515, -24.2874, 328.291, -20.8, 261.768, -24.2874, 204.073, -31.2, 150.836, -20.8, 62.1091, -20.8, 44.3636, -31.2, 26.6182, -10.4, 16, 0)
 
@@ -216,6 +215,7 @@ vertical_alignment = 1
 
 [node name="TaskOption4" type="Control" parent="TaskOptions"]
 layout_mode = 1
+anchors_preset = 0
 offset_left = 64.0
 offset_top = 328.0
 offset_right = 448.0
@@ -265,7 +265,6 @@ polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 
 [node name="Background" type="Polygon2D" parent="TaskOptions/TaskOption5/Foreground"]
 z_index = -1
 position = Vector2(10.4058, 5.84171)
-scale = Vector2(1, 1)
 color = Color(0.6, 0.6, 0.6, 0.392157)
 polygon = PackedVector2Array(44.3636, 31.2, 60.4079, 40.4791, 80.5439, 40.4791, 112, 56, 186.327, 52, 251.7, 43.9421, 322.175, 48.5749, 362.447, 37.0383, 422.855, 50.846, 452.509, 31.2, 479.127, 0, 455.365, -13.8077, 407.842, -6.90384, 360.319, -13.8077, 328.291, -20.8, 265.272, -6.90384, 201.36, -11.2885, 134.582, -6.90384, 87.0586, -6.90384, 50.3399, -11.2885, 70.4758, 2.51913, 60.4079, 16.3268)
 
