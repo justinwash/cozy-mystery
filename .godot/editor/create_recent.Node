@@ -1,12 +1,13 @@
+Camera2D
+Polygon2D
+CollisionShape2D
 Line2D
 Control
 Label
-Polygon2D
 Container
 ColorRect
 AnimatedSprite2D
 AnimationPlayer
-CollisionShape2D
 Marker2D
 Area2D
 StaticBody2D

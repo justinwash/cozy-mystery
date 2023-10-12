@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkle68d2vdh7n"]
 
 [ext_resource type="Script" path="res://main_pc.gd" id="1_0xx5o"]
-[ext_resource type="Texture2D" uid="uid://bh4jjuqj5rkwi" path="res://Assets/Generated/character.png" id="2_sceja"]
+[ext_resource type="Texture2D" uid="uid://bbqwm1ht3xuva" path="res://Assets/Art/Player/player.png" id="2_6xpwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah2e7"]
 size = Vector2(40, 120)
@@ -12,18 +12,26 @@ size = Vector2(40, 120)
 [node name="Main PC" type="CharacterBody2D"]
 script = ExtResource("1_0xx5o")
 
-[node name="Character" type="Sprite2D" parent="."]
-position = Vector2(0, 8.00003)
-scale = Vector2(0.126953, 0.126953)
-texture = ExtResource("2_sceja")
+[node name="Player" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(9.53674e-07, 6)
+scale = Vector2(0.043, 0.043)
+texture = ExtResource("2_6xpwx")
+
+[node name="Polygon2D" type="Polygon2D" parent="Player"]
+show_behind_parent = true
+polygon = PackedVector2Array(-348.837, -1418.6, -395.349, -1325.58, -395.349, -1255.81, -372.093, -1162.79, -348.837, -1116.28, -302.326, -1069.77, -255.814, -1046.51, -255.814, -976.744, -302.326, -906.977, -395.349, -837.209, -488.372, -767.442, -651.163, -465.116, -651.163, -395.349, -441.86, -162.791, -465.116, 46.5116, -348.837, 465.116, -325.581, 767.442, -348.837, 953.488, -325.581, 1023.26, -325.581, 1162.79, -372.093, 1186.05, -348.837, 1255.81, -279.07, 1255.81, -116.279, 1372.09, -69.7675, 1348.84, -46.5116, 1302.33, -139.535, 1255.81, -162.791, 1162.79, -209.302, 1116.28, -209.302, 1000, -139.535, 976.744, -186.047, 720.93, -139.535, 46.5116, -116.279, 348.837, -93.0233, 441.86, -46.5116, 581.395, -46.5116, 767.442, -46.5116, 883.721, -23.2558, 930.232, 23.2558, 1000, 23.2558, 1093.02, -2.21785e-05, 1162.79, 23.2558, 1186.05, 23.2558, 1232.56, 162.791, 1255.81, 255.814, 1325.58, 302.326, 1325.58, 348.837, 1279.07, 302.326, 1232.56, 186.046, 1139.53, 162.791, 1093.02, 162.791, 976.744, 139.535, 883.721, 116.279, 720.93, 93.0232, 558.14, 116.279, 279.07, 93.0232, 23.2558, 23.2558, -186.046, 69.7674, -232.558, 23.2558, -395.349, -2.21785e-05, -534.884, 116.279, -348.837, 186.046, -232.558, 232.558, -186.046, 255.814, -139.535, 302.326, -162.791, 302.326, -232.558, 255.814, -232.558, 232.558, -348.837, 162.791, -604.651, 93.0232, -837.209, 23.2558, -860.465, -93.0233, -883.721, -116.279, -930.232, -116.279, -1000, -69.7675, -1023.26, -46.5116, -1093.02, -69.7675, -1186.05, -46.5116, -1255.81, -116.279, -1348.84, -209.302, -1348.84, -232.558, -1372.09, -279.07, -1372.09)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-4, 4)
 shape = SubResource("RectangleShape2D_ah2e7")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(-4, 4)
 shape = SubResource("RectangleShape2D_hiwk6")
 

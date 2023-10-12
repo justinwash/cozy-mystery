@@ -12,12 +12,14 @@ config_version=5
 
 config/name="Cozy Mystery"
 config/description="a mystery adventure game"
-run/main_scene="res://InsideOfHouse.tscn"
+run/main_scene="res://Town.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [display]
 
+window/size/viewport_width=2560
+window/size/viewport_height=1440
 window/stretch/mode="viewport"
 window/per_pixel_transparency/allowed=true
 window/size/width=1920

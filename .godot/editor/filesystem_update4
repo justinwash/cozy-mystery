@@ -3,3 +3,5 @@ res://main_pc.gd
 res://MainPC.tscn
 res://InsideOfHouse.tscn
 res://journal.tscn
+res://AubreyLearnsToCode.tscn
+res://town.gd
